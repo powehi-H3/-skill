@@ -3,6 +3,29 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 
+# Migrated-production anti-regression checks.
+pov = (ROOT / "tests/golden/pov-reference-role.expected.txt").read_text(encoding="utf-8")
+phase = (ROOT / "tests/golden/phase-isolation.expected.txt").read_text(encoding="utf-8")
+audio = (ROOT / "tests/golden/dialogue-audio-role.expected.txt").read_text(encoding="utf-8")
+repair = (ROOT / "tests/golden/camera-only-repair.expected.txt").read_text(encoding="utf-8")
+transfer = (ROOT / "tests/golden/attribute-transfer.expected.txt").read_text(encoding="utf-8")
+
+for name, text_value in [("POV_REFERENCE", pov), ("PHASE_ISOLATION", phase), ("DIALOGUE_AUDIO", audio), ("CAMERA_REPAIR", repair), ("ATTRIBUTE_TRANSFER", transfer)]:
+    if "cinematic" in text_value.lower() or "professional" in text_value.lower():
+        raise SystemExit(name + "_GENERIC_FILLER_FAIL")
+
+if "Picture 3" not in pov or "male POV" not in pov or "Picture 1" not in pov or "Picture 2" not in pov:
+    raise SystemExit("POV_REFERENCE_ROLE_LOCK_FAIL")
+if "Phase B must not appear during Phase A" not in phase or "only after the transition" not in phase:
+    raise SystemExit("PHASE_ISOLATION_FAIL")
+if "Preserve the dialogue exactly" not in audio or "timbre and delivery" not in audio or "Do not copy dialogue" not in audio:
+    raise SystemExit("DIALOGUE_AUDIO_ROLE_FAIL")
+if "Change only the camera" not in repair or "Do not add new movement" not in repair:
+    raise SystemExit("CAMERA_ONLY_SCOPE_FAIL")
+if "Transfer only the explicitly requested attribute" not in transfer or "Do not import other attributes" not in transfer:
+    raise SystemExit("ATTRIBUTE_TRANSFER_SCOPE_FAIL")
+
+
 base = (ROOT / "tests/golden/base-t2va.expected.txt").read_text(encoding="utf-8")
 i2va = (ROOT / "tests/golden/i2va.expected.txt").read_text(encoding="utf-8")
 
@@ -67,5 +90,6 @@ if positions != sorted(positions):
 print("GOLDEN BASIC OFFICE PASS")
 print("GOLDEN BASE T2VA PASS")
 print("GOLDEN I2VA ALIGNMENT PASS")
+print("MIGRATED PRODUCTION REGRESSION PASS")
 print("unauthorized_semantics=0")
 print("runtime_execution=False")
