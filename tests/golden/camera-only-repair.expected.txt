@@ -1,0 +1,19 @@
+subject_definitions:
+Male: the male subject.
+Female: the female subject.
+
+summary:
+The original interaction remains unchanged; only the requested camera change is applied.
+
+retention_analysis:
+Preserve subject identity, appearance, environment, actions, dialogue, and timing.
+Change only the camera as requested.
+
+detailed_description:
+Keep the original authorized interaction, actions, dialogue, environment, and timing unchanged. Apply only the requested camera specification. Do not add new movement, lighting, props, emotion, or action.
+
+overall_soundscape:
+Preserve the original authorized soundscape.
+
+non_diegetic_music:
+Preserve the original music instruction.
