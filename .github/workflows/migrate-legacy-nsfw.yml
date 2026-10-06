@@ -1,0 +1,52 @@
+name: Migrate legacy NSFW prompt assets
+
+on:
+  push:
+    paths:
+      - ".github/workflows/migrate-legacy-nsfw.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Copy legacy prompt assets verbatim
+        shell: bash
+        run: |
+          set -euo pipefail
+          base="https://raw.githubusercontent.com/powehi-H3/minimax-h3-NSFW-skill/main"
+
+          declare -a files=(
+            "PROJECT/SKILL_OPTIMIZATION-技能优化/PW-OPT-001-优化skill--参考别人的github技能skill/GROK/2026-10-03-PROMPT-EXP-B-桌下口交-连续一镜.md"
+            "PROJECT/SKILL_OPTIMIZATION-技能优化/PW-OPT-001-优化skill--参考别人的github技能skill/GROK/2026-10-03-PROMPT-PURE-EXTERNAL-桌下口交.md"
+            "PROJECT/WORKSPACE-工作区/PROMPT_WRITING-提示词编写/PW-0001-办公室桌下口交/00_BRIEF-需求.md"
+            "PROJECT/WORKSPACE-工作区/PROMPT_WRITING-提示词编写/PW-0001-办公室桌下口交/01_GROK_DRAFT-初版.md"
+            "PROJECT/WORKSPACE-工作区/PROMPT_WRITING-提示词编写/PW-0001-办公室桌下口交/03_GEMINI_REVIEW-审查.md"
+          )
+
+          for src in "${files[@]}"; do
+            case "$src" in
+              *"/GROK/"*)
+                dst="references/library/legacy-nsfw-prompts/grok/$(basename "$src")"
+                ;;
+              *)
+                dst="references/library/legacy-nsfw-prompts/pw-0001/$(basename "$src")"
+                ;;
+            esac
+            mkdir -p "$(dirname "$dst")"
+            curl --fail --location --silent --show-error "$base/$(printf '%s' "$src" | jq -sRr @uri)" -o "$dst"
+          done
+
+          git config user.name "legacy-nsfw-migration"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add references/library/legacy-nsfw-prompts
+          if git diff --cached --quiet; then
+            echo "Nothing to migrate."
+            exit 0
+          fi
+          git commit -m "migrate remaining legacy NSFW prompt assets [skip ci]"
+          git push
