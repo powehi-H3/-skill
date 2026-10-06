@@ -152,5 +152,25 @@
     "id": "camera-grammar",
     "category": "camera",
     "request": "使用指定POV和机位，但除非明确要求，不增加推拉摇移跟拍或重新构图。"
+  },
+  {
+    "id": "multi-subject-role",
+    "category": "reference",
+    "request": "两个人分别使用Picture 1和Picture 2保持身份外观，Picture 3只作为环境参考，不能互相串属性。"
+  },
+  {
+    "id": "optimize-no-semantic-addition",
+    "category": "scope",
+    "request": "优化现有提示词的表达和H3执行清晰度，但不要增加任何新的剧情事实。"
+  },
+  {
+    "id": "diagnose-no-rewrite",
+    "category": "diagnosis",
+    "request": "只诊断生成失败的责任层，不重写无关内容。"
+  },
+  {
+    "id": "visible-text-preservation",
+    "category": "text",
+    "request": "画面中的指定文字保持原文，不翻译、不改写。"
   }
 ]
