@@ -106,26 +106,31 @@
   {
     "id": "pov-reference-role",
     "category": "reference",
-    "goal": "identity/environment/POV role isolation"
+    "goal": "identity/environment/POV role isolation",
+    "request": "Male and female identities use Pictures 1 and 2, Picture 3 is environment, and the shot is observed from male POV."
   },
   {
     "id": "phase-isolation",
     "category": "temporal",
-    "goal": "Phase A completion before Transition before Phase B"
+    "goal": "Phase A completion before Transition before Phase B",
+    "request": "Phase A completes, then Transition occurs, then Phase B begins without cross-phase leakage."
   },
   {
     "id": "dialogue-audio-role",
     "category": "audio",
-    "goal": "exact dialogue plus timbre-only audio reference"
+    "goal": "exact dialogue plus timbre-only audio reference",
+    "request": "Preserve the exact user dialogue and use Audio 1 for voice timbre and delivery only."
   },
   {
     "id": "camera-only-repair",
     "category": "repair",
-    "goal": "camera-only edit freezes unrelated semantics"
+    "goal": "camera-only edit freezes unrelated semantics",
+    "request": "Change only the requested camera while preserving all unrelated prompt semantics."
   },
   {
     "id": "attribute-transfer",
     "category": "reference",
-    "goal": "transfer one explicit attribute without source contamination"
+    "goal": "transfer one explicit attribute without source contamination",
+    "request": "Transfer only the explicitly requested attribute from Picture 2 to the subject defined by Picture 1."
   }
 ]
