@@ -1,0 +1,6 @@
+Picture 1: identity and appearance only.
+Picture 2: environment only.
+Audio 1: voice timbre and delivery only.
+
+Adult semantic isolation:
+Do not import sexual actions, poses, props, dialogue, or escalation from any reference whose role does not explicitly authorize them.
