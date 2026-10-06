@@ -26,6 +26,19 @@ jobs:
             "PROJECT/WORKSPACE-工作区/PROMPT_WRITING-提示词编写/PW-0001-办公室桌下口交/00_BRIEF-需求.md"
             "PROJECT/WORKSPACE-工作区/PROMPT_WRITING-提示词编写/PW-0001-办公室桌下口交/01_GROK_DRAFT-初版.md"
             "PROJECT/WORKSPACE-工作区/PROMPT_WRITING-提示词编写/PW-0001-办公室桌下口交/03_GEMINI_REVIEW-审查.md"
+            "baseline/H3NSFW提示词技能skill第三版-V1-5-patch-optimize/references/poses/做爱/切镜/侧卧切镜/prompt.md"
+            "baseline/H3NSFW提示词技能skill第三版-V1-5-patch-optimize/references/poses/做爱/切镜/骑乘位切镜/prompt.md"
+            "baseline/H3NSFW提示词技能skill第三版-V1-5-patch-optimize/references/poses/做爱/第一人称视角/README.md"
+            "baseline/H3NSFW提示词技能skill第三版-V1-5-patch-optimize/references/poses/做爱/第一人称视角/传教士/prompt.md"
+            "baseline/H3NSFW提示词技能skill第三版-V1-5-patch-optimize/references/poses/做爱/第一人称视角/坐边上骑乘位/prompt.md"
+            "baseline/H3NSFW提示词技能skill第三版-V1-5-patch-optimize/references/poses/做爱/第一人称视角/床上骑乘位/prompt.md"
+            "baseline/H3NSFW提示词技能skill第三版-V1-5-patch-optimize/references/poses/做爱/第三人称视角/侧卧/prompt.md"
+            "baseline/H3NSFW提示词技能skill第三版-V1-5-patch-optimize/references/poses/做爱/第三人称视角/半仰卧抬腿侧入/prompt.md"
+            "baseline/H3NSFW提示词技能skill第三版-V1-5-patch-optimize/references/poses/待验证样例/README.md"
+            "baseline/H3NSFW提示词技能skill第三版-V1-5-patch-optimize/references/poses/待验证样例/抱起肛交/prompt.md"
+            "baseline/H3NSFW提示词技能skill第三版-V1-5-patch-optimize/references/poses/待验证样例/跪地口交-深喉后打飞机/prompt.md"
+            "baseline/H3NSFW提示词技能skill第三版-V1-5-patch-optimize/references/poses/待验证样例/跪地口交/prompt.md"
+            "baseline/H3NSFW提示词技能skill第三版-V1-5-patch-optimize/references/poses/待验证样例/颜射/prompt.md"
           )
 
           for src in "${files[@]}"; do
