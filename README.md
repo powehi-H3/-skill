@@ -20,6 +20,16 @@ The project separates:
 
 If the user did not specify a camera, action, prop, lighting setup, dialogue content, duration, or other semantic detail, the Skill must not invent it merely to make the prompt look complete.
 
+## Authority boundary
+
+The project has three distinct authority levels:
+
+1. **Official MiniMax H3 syntax and mode requirements** — authoritative for H3 schema and mode-specific formatting.
+2. **Explicit user intent and reference-role assignments** — authoritative for the requested semantic payload.
+3. **This Skill's compiler, QA, and approved-experience layers** — execution guidance that must not override the first two.
+
+Production lessons in this repository are not MiniMax official behavior claims. They are implementation heuristics validated only to the extent stated by their regression evidence and approval metadata.
+
 ## Current status
 
 V1 foundation. Offline/static regression only. Real MiniMax H3 generation is not claimed or simulated.
@@ -35,7 +45,7 @@ references/
   temporal/
   audio/
   editing/
-  qa/
+    qa/
   library/
 tests/
 ```
