@@ -1,0 +1,19 @@
+subject_definitions:
+Subject: the authorized subject.
+
+summary:
+The task is to diagnose the identified generation failure without rewriting unrelated prompt content.
+
+retention_analysis:
+Identify the failed observable and its smallest responsible layer.
+Do not change unrelated semantics.
+Do not introduce a replacement scene merely to demonstrate a possible repair.
+
+detailed_description:
+Diagnosis identifies the responsible layer and the minimal repair direction. No unrelated prompt content is rewritten.
+
+overall_soundscape:
+N/A
+
+non_diegetic_music:
+N/A
