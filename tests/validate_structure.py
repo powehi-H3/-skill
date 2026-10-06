@@ -23,7 +23,7 @@ required_files = [
     "references/library/README.md",
     "tests/cases.json",
     "tests/golden/base-t2va.expected.txt",
-    "tests/golden/i2va.expected.txt",
+    "tests/golden/i2va.expected.txt",\n    "tests/golden/attribute-transfer.expected.txt",\n    "tests/golden/camera-only-repair.expected.txt",\n    "tests/golden/dialogue-audio-role.expected.txt",\n    "tests/golden/phase-isolation.expected.txt",\n    "tests/golden/pov-reference-role.expected.txt",
 ]
 
 required_markers = [
