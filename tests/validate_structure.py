@@ -22,6 +22,8 @@ required_files = [
     "references/qa/purity.md",
     "references/library/README.md",
     "tests/cases.json",
+    "tests/golden/base-t2va.expected.txt",
+    "tests/golden/i2va.expected.txt",
 ]
 
 required_markers = [
