@@ -4,6 +4,20 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 # Migrated-production anti-regression checks.
+multi = (ROOT / "tests/golden/multi-subject-role.expected.txt").read_text(encoding="utf-8")
+optimize = (ROOT / "tests/golden/optimize-no-semantic-addition.expected.txt").read_text(encoding="utf-8")
+diagnose = (ROOT / "tests/golden/diagnose-no-rewrite.expected.txt").read_text(encoding="utf-8")
+visible = (ROOT / "tests/golden/visible-text-preservation.expected.txt").read_text(encoding="utf-8")
+
+if "Keep the subjects semantically distinct" not in multi or "Do not transfer attributes" not in multi:
+    raise SystemExit("MULTI_SUBJECT_ROLE_FAIL")
+if "Do not add new story facts" not in optimize or "No new event" not in optimize:
+    raise SystemExit("OPTIMIZE_SCOPE_FAIL")
+if "without rewriting unrelated" not in diagnose or "minimal repair" not in diagnose:
+    raise SystemExit("DIAGNOSE_SCOPE_FAIL")
+if "exactly as supplied" not in visible or "Do not translate" not in visible:
+    raise SystemExit("VISIBLE_TEXT_PRESERVATION_FAIL")
+
 action = (ROOT / "tests/golden/action-continuity.expected.txt").read_text(encoding="utf-8")
 time_budget = (ROOT / "tests/golden/time-budget.expected.txt").read_text(encoding="utf-8")
 endpoint = (ROOT / "tests/golden/frame-endpoint.expected.txt").read_text(encoding="utf-8")
