@@ -1,0 +1,23 @@
+subject_definitions:
+Male: the male subject.
+Female: the female subject.
+
+summary:
+Phase A occurs first, followed by the required transition, then Phase B.
+
+retention_analysis:
+Phase A must fully complete before the transition.
+Phase B must not appear during Phase A.
+Preserve the order and completion of the requested phases.
+
+detailed_description:
+Phase A: the authorized Phase A action occurs and reaches its specified end state.
+Transition: only after Phase A is complete, the authorized transition occurs.
+Phase B: only after the transition is complete, the authorized Phase B action begins.
+No Phase B action, pose, state, or outcome leaks into Phase A.
+
+overall_soundscape:
+Only sounds belonging to the authorized actions and environment.
+
+non_diegetic_music:
+N/A
