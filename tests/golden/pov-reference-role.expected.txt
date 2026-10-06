@@ -1,0 +1,26 @@
+subject_definitions:
+Picture 1: reference image for the man's identity and visual appearance.
+Picture 2: reference image for the woman's identity and visual appearance.
+Picture 3: reference image for the environment and background.
+Male: the man.
+Female: the woman.
+Environment: the specified environment from Picture 3.
+
+summary:
+The male subject and female subject interact in the environment established by Picture 3, observed from the requested male POV.
+
+retention_analysis:
+Preserve the male identity and appearance from Picture 1.
+Preserve the female identity and appearance from Picture 2.
+Preserve the environment and background from Picture 3.
+Preserve the requested male POV.
+Do not import unrelated pose, props, lighting, or dialogue content from the reference images.
+
+detailed_description:
+Maintain the identities and appearances established by Picture 1 and Picture 2, and the environment established by Picture 3. The camera observes from the requested male POV. Only the user-authorized interaction occurs.
+
+overall_soundscape:
+Only the authorized environmental and interaction sounds.
+
+non_diegetic_music:
+N/A
