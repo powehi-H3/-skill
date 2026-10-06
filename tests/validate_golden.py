@@ -4,6 +4,42 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 # Migrated-production anti-regression checks.
+t2 = (ROOT / "tests/golden/t2va-routing.expected.txt").read_text(encoding="utf-8")
+i2 = (ROOT / "tests/golden/i2va-routing.expected.txt").read_text(encoding="utf-8")
+fl2 = (ROOT / "tests/golden/fl2va-routing.expected.txt").read_text(encoding="utf-8")
+l2 = (ROOT / "tests/golden/l2va-routing.expected.txt").read_text(encoding="utf-8")
+ref2 = (ROOT / "tests/golden/ref2va-routing.expected.txt").read_text(encoding="utf-8")
+
+base_fields = ["integrated_multimodal_description:", "overall_soundscape:", "non_diegetic_music:"]
+ref_fields = ["subject_definitions:", "summary:", "retention_analysis:", "detailed_description:"]
+
+for field in base_fields:
+    if field not in t2:
+        raise SystemExit("T2VA_ROUTING_MISSING_CORE")
+if any(field in t2 for field in ref_fields):
+    raise SystemExit("T2VA_ROUTING_LEAKED_REF2VA_SCHEMA")
+
+if not i2.startswith("For the target video, at 0.00 seconds"):
+    raise SystemExit("I2VA_ROUTING_HEADER_FAIL")
+if any(field in i2 for field in ref_fields):
+    raise SystemExit("I2VA_ROUTING_LEAKED_REF2VA_SCHEMA")
+
+if "0.00-second mark" not in fl2 or "last-frame state" not in fl2:
+    raise SystemExit("FL2VA_ROUTING_ENDPOINT_FAIL")
+if any(field in fl2 for field in ref_fields):
+    raise SystemExit("FL2VA_ROUTING_LEAKED_REF2VA_SCHEMA")
+
+if "last-frame" not in l2 or "S.SS-second mark" not in l2:
+    raise SystemExit("L2VA_ROUTING_ENDPOINT_FAIL")
+if any(field in l2 for field in ref_fields):
+    raise SystemExit("L2VA_ROUTING_LEAKED_REF2VA_SCHEMA")
+
+for field in ref_fields + ["overall_soundscape:", "non_diegetic_music:"]:
+    if field not in ref2:
+        raise SystemExit("REF2VA_ROUTING_MISSING_FIELD")
+if "integrated_multimodal_description:" in ref2:
+    raise SystemExit("REF2VA_ROUTING_USED_BASE_SCHEMA")
+
 multi = (ROOT / "tests/golden/multi-subject-role.expected.txt").read_text(encoding="utf-8")
 optimize = (ROOT / "tests/golden/optimize-no-semantic-addition.expected.txt").read_text(encoding="utf-8")
 diagnose = (ROOT / "tests/golden/diagnose-no-rewrite.expected.txt").read_text(encoding="utf-8")
