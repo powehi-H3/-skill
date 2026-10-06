@@ -1,0 +1,8 @@
+integrated_multimodal_description:
+A person enters the room and performs the user-requested action. Build the audiovisual timeline entirely from the supplied text.
+
+overall_soundscape:
+Only the sounds authorized by the request.
+
+non_diegetic_music:
+N/A
