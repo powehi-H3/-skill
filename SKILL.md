@@ -35,6 +35,18 @@ Use this priority:
 
 Lower-priority material may not override higher-priority material.
 
+### Semantic Addition Gate
+
+Before adding any semantic fact, classify its source. A new fact is allowed only if it comes from:
+- the current user request;
+- an explicit user-preserved/reference-role assignment;
+- an official H3 structural requirement;
+- an APPROVED Skill rule;
+- an approved experience that changes HOW rather than WHAT;
+- necessary language compilation required to express an already-authorized concept.
+
+Examples, plausibility, model habit, or historical prompts are not semantic authorization.
+
 ### Hard rule
 
 **Experience, examples, frequency, plausibility, and model preference are not authorization to add new story facts.**
@@ -127,7 +139,16 @@ Allowed compilation:
 Not automatically authorized:
 "They smile, gesture with their hands, exchange documents, and look at each other."
 
-## 7. Mode-specific output schemas
+## 7. Production reasoning and progressive loading
+
+When staging, continuity, camera, or multi-step action matters, internally reason in this order:
+USER INTENT → SUBJECT/REFERENCE LOCK → BLOCKING/STAGING → STATE/ACTION → CAMERA/POV → CONTINUITY → SOUND/DIALOGUE → H3 PAYLOAD.
+
+Load only the reference family relevant to the task. Do not activate the entire historical knowledge base for a simple request.
+
+Use `references/compiler/production-reasoning.md` and `references/compiler/reference-recipes.md` when applicable.
+
+## 8. Mode-specific output schemas
 
 ### Base modes: T2VA / I2VA / FL2VA / L2VA
 
@@ -162,7 +183,7 @@ Do not create a seventh section for facial performance or another subdomain. Put
 
 Schema selection is determined by the actual H3 mode. Do not force the six-section Ref2VA schema onto T2VA, I2VA, FL2VA, or L2VA.
 
-## 8. Schema completeness rule
+## 9. Schema completeness rule
 
 Schema completeness does not authorize semantic invention.
 
@@ -185,7 +206,7 @@ leave those dimensions unspecified unless the applicable official H3 format requ
 
 Do not fill every field with decorative prose.
 
-## 9. Shot and temporal logic
+## 10. Shot and temporal logic
 
 When a prompt contains multiple shots or phases:
 
@@ -203,7 +224,22 @@ For first/last-frame modes:
 - do not introduce unrelated scene changes;
 - FL2VA generally prefers a continuous single shot unless multiple shots are explicitly requested.
 
-## 10. Camera
+## 10. Time and information density
+
+For timed sequences, allocate internally in this order:
+
+TOTAL DURATION → mandatory dialogue/performance → mandatory transitions → mandatory actions/states → remaining descriptive capacity.
+
+Do not solve an overfull sequence by inventing extra duration or events. Compress wording first; if a genuine semantic conflict remains, surface it rather than fabricating content.
+
+Use temporal anchors when a meaningful state, camera state, spatial relationship, action phase, dialogue phase, or required end state changes. Do not add timestamps mechanically.
+
+Classify repetition:
+- functional repeat: allowed when needed for a new shot/state;
+- verbal repeat: merge or remove;
+- polluting repeat: always remove.
+
+## 11. Camera
 
 Camera instructions are part of a shot, not a detached list of competing commands.
 
@@ -233,11 +269,11 @@ Do not invent dialogue content.
 
 Do not assign a speaker ID to a character that never speaks unless the applicable format requires it.
 
-## 12. Visible text
+## 13. Visible text
 
 Visible signs, labels, banners, subtitles, screens, and other requested on-screen text must preserve the user's supplied wording and punctuation. Do not translate or replace it.
 
-## 13. Concrete observability
+## 14. Concrete observability
 
 Prefer concrete visible or audible results over abstract filler.
 
@@ -245,7 +281,7 @@ If the user supplies an abstract state such as "紧张", compile it into observa
 
 Do not use words such as "cinematic", "professional", "immersive", or "realistic" as substitutes for actual visual/audio instructions.
 
-## 14. Editing discipline
+## 15. Editing discipline
 
 When editing an existing prompt:
 
@@ -257,7 +293,9 @@ When editing an existing prompt:
 
 Never rewrite the entire prompt merely because one field changed.
 
-## 15. QA
+## 16. QA
+
+When diagnosing or repairing an observed failure, use `references/qa/failure-repair.md` and patch the smallest responsible layer. Never broaden a local repair into a global rule without evidence.
 
 Before emitting an H3 payload, check:
 
@@ -281,7 +319,7 @@ Does the final payload contain internal Skill reasoning, QA instructions, implem
 
 If any hard failure exists, recompile before emission.
 
-## 16. Length and information density
+## 17. Length and information density
 
 Do not optimize for maximum length.
 
@@ -299,7 +337,13 @@ Remove repetition and abstract filler before removing user-authorized semantics.
 
 Observe the applicable H3 character limit documented by the current official reference.
 
-## 17. Final output
+## 18. Experience and historical knowledge
+
+If an Experience Library is present, use `references/library/experience-retrieval.md` before generation only when the task materially benefits from prior validated production knowledge. Only APPROVED, applicable experiences may influence compilation. Experience changes HOW, not WHAT.
+
+Prompt Library artifacts are examples of validated outputs; Experience Library records the conditions and lessons behind them. Do not automatically promote either into Skill rules.
+
+## 19. Final output
 
 For a prompt-writing task, output the applicable H3 payload directly.
 
