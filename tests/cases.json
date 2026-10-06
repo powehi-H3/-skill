@@ -197,5 +197,20 @@
     "id": "mode-route-ref2va",
     "category": "routing",
     "request": "多张参考图分别承担人物和环境职责，使用Ref2VA六段Schema。"
+  },
+  {
+    "id": "nsfw-semantic-preservation",
+    "category": "adult",
+    "request": "成人/NSFW语义由用户明确提供；编译时保持用户指定语义，不擅自弱化、替换，也不增加未请求的成人动作。"
+  },
+  {
+    "id": "nsfw-phase-isolation",
+    "category": "adult",
+    "request": "成人场景包含Phase A、Transition、Phase B；后阶段动作必须等前阶段完成后才出现，不允许阶段泄漏。"
+  },
+  {
+    "id": "nsfw-reference-isolation",
+    "category": "adult",
+    "request": "人物、环境、声音分别由不同参考指定；不得从未授权的参考中导入成人动作、姿势、道具、台词或升级内容。"
   }
 ]
