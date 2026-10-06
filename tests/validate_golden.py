@@ -161,7 +161,7 @@ print("unauthorized_semantics=0")
 print("runtime_execution=False")
 
 nsfw = (ROOT / "tests/golden/nsfw-semantic-preservation.expected.txt").read_text(encoding="utf-8")
-if "preserve the user's explicit semantic intent" not in nsfw:
+if "Preserve the adult semantic content explicitly supplied by the user." not in nsfw:
     raise SystemExit("NSFW_SEMANTIC_PRESERVATION_RULE_MISSING")
 if "Do not add any unrequested sexual action" not in nsfw:
     raise SystemExit("NSFW_ADDITION_GUARD_MISSING")
