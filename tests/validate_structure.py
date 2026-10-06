@@ -21,6 +21,7 @@ required_files = [
     "references/qa/semantic-diff.md",
     "references/qa/purity.md",
     "references/library/README.md",
+    "references/library/approved-experience-examples.md",
     "tests/cases.json",
     "tests/golden/base-t2va.expected.txt",
     "tests/golden/i2va.expected.txt",
