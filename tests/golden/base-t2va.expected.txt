@@ -1,0 +1,5 @@
+integrated_multimodal_description: [Shot 1] Live-action, a person walks into a room.
+
+overall_soundscape: Natural room ambience and the person's footsteps.
+
+non_diegetic_music: N/A
