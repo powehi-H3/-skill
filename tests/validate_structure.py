@@ -44,6 +44,7 @@ required_markers = [
     "detailed_description:",
     "overall_soundscape:",
     "non_diegetic_music:",
+    "integrated_multimodal_description:",
     "Missing",
     "Added",
     "Altered",
@@ -60,7 +61,7 @@ if missing_markers:
     raise SystemExit("MISSING_SKILL_MARKERS: " + ", ".join(missing_markers))
 
 cases = json.loads((ROOT / "tests/cases.json").read_text(encoding="utf-8"))
-if len(cases) < 6:
+if len(cases) < 8:
     raise SystemExit("INSUFFICIENT_REGRESSION_CASES")
 
 for case in cases:

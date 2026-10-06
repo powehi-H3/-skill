@@ -2,36 +2,105 @@
   {
     "id": "basic-office-conversation",
     "request": "一男（老板）一女，参考图片1，在老板办公室办公桌交谈",
-    "must_preserve": ["male", "boss", "female", "Picture 1", "boss office", "office desk", "conversation"],
-    "must_not_invent": ["standing", "sitting", "computer", "documents", "window", "push-in", "lighting design", "dialogue content"]
+    "must_preserve": [
+      "male",
+      "boss",
+      "female",
+      "Picture 1",
+      "boss office",
+      "office desk",
+      "conversation"
+    ],
+    "must_not_invent": [
+      "standing",
+      "sitting",
+      "computer",
+      "documents",
+      "window",
+      "push-in",
+      "lighting design",
+      "dialogue content"
+    ]
   },
   {
     "id": "camera-only-edit",
     "request": "把现有提示词的镜头改成POV，其他不变",
     "scope": "camera-only",
-    "must_preserve_unrelated": ["characters", "setting", "actions", "dialogue", "sound"]
+    "must_preserve_unrelated": [
+      "characters",
+      "setting",
+      "actions",
+      "dialogue",
+      "sound"
+    ]
   },
   {
     "id": "voice-reference-only",
     "request": "Audio 1只参考女声的音色和说话方式，不复制台词",
-    "must_preserve": ["Audio 1", "voice timbre", "delivery"],
-    "must_not_invent": ["dialogue copied from Audio 1"]
+    "must_preserve": [
+      "Audio 1",
+      "voice timbre",
+      "delivery"
+    ],
+    "must_not_invent": [
+      "dialogue copied from Audio 1"
+    ]
   },
   {
     "id": "phase-order",
     "request": "Phase A完成后进入Transition，再开始Phase B",
-    "must_preserve": ["Phase A", "Transition", "Phase B"],
-    "must_not_invent": ["Phase B action during Phase A"]
+    "must_preserve": [
+      "Phase A",
+      "Transition",
+      "Phase B"
+    ],
+    "must_not_invent": [
+      "Phase B action during Phase A"
+    ]
   },
   {
     "id": "no-duration-invention",
     "request": "一男一女在办公室交谈，没有指定视频时长",
-    "must_not_invent": ["15-second", "10-second", "5-second"]
+    "must_not_invent": [
+      "15-second",
+      "10-second",
+      "5-second"
+    ]
   },
   {
     "id": "exact-dialogue",
     "request": "人物说：“我们明天上午再谈。”对白保持原文",
-    "must_preserve": ["我们明天上午再谈。"],
+    "must_preserve": [
+      "我们明天上午再谈。"
+    ],
     "must_not_translate": true
+  },
+  {
+    "id": "base-mode-schema",
+    "request": "纯文字：一个人走进房间",
+    "mode": "T2VA",
+    "required_schema": [
+      "integrated_multimodal_description",
+      "overall_soundscape",
+      "non_diegetic_music"
+    ],
+    "must_not_use_as_outer_schema": [
+      "subject_definitions",
+      "summary",
+      "retention_analysis"
+    ]
+  },
+  {
+    "id": "keyframe-endpoint",
+    "request": "首帧是门关闭，尾帧是门打开，描述中间连续变化",
+    "mode": "FL2VA",
+    "must_preserve": [
+      "first frame",
+      "last frame",
+      "continuous transition"
+    ],
+    "must_not_invent": [
+      "unrelated scene change"
+    ]
   }
 ]

@@ -117,9 +117,21 @@ Allowed compilation:
 Not automatically authorized:
 "They smile, gesture with their hands, exchange documents, and look at each other."
 
-## 7. Ref2VA / multi-reference schema
+## 7. Mode-specific output schemas
 
-When the applicable mode requires the complete reference-based H3 schema, use exactly:
+### Base modes: T2VA / I2VA / FL2VA / L2VA
+
+Use the official base-mode three-field schema in this exact order:
+
+integrated_multimodal_description:
+overall_soundscape:
+non_diegetic_music:
+
+The first field carries the visual timeline and any dialogue, vocal performance, and diegetic action sounds that belong at the relevant point in the timeline. The soundscape field carries environmental and physical sound that is not already represented in the integrated timeline. The music field is for non-diegetic music.
+
+### Ref2VA / full-reference mode
+
+Use the complete reference-based schema in this exact order:
 
 subject_definitions:
 summary:
@@ -128,9 +140,13 @@ detailed_description:
 overall_soundscape:
 non_diegetic_music:
 
-Do not create a seventh section for facial performance or other subdomains. Put relevant visual performance detail inside detailed_description.
+Reference labels must remain stable across all sections.
 
-Use the official mode-specific schema for other modes.
+Do not create a seventh section for facial performance or another subdomain. Put relevant visual performance detail inside detailed_description.
+
+### Important
+
+Schema selection is determined by the actual H3 mode. Do not force the six-section Ref2VA schema onto T2VA, I2VA, FL2VA, or L2VA.
 
 ## 8. Schema completeness rule
 
