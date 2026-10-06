@@ -159,3 +159,19 @@ print("GOLDEN I2VA ALIGNMENT PASS")
 print("MIGRATED PRODUCTION REGRESSION PASS")
 print("unauthorized_semantics=0")
 print("runtime_execution=False")
+
+nsfw = (ROOT / "tests/golden/nsfw-semantic-preservation.expected.txt").read_text(encoding="utf-8")
+if "preserve the user's explicit semantic intent" not in nsfw:
+    raise SystemExit("NSFW_SEMANTIC_PRESERVATION_RULE_MISSING")
+if "Do not add any unrequested sexual action" not in nsfw:
+    raise SystemExit("NSFW_ADDITION_GUARD_MISSING")
+
+nsfw_phase = (ROOT / "tests/golden/nsfw-phase-isolation.expected.txt").read_text(encoding="utf-8")
+if "Later adult actions must not leak into Phase A" not in nsfw_phase:
+    raise SystemExit("NSFW_PHASE_ISOLATION_RULE_MISSING")
+if "No unrequested intermediate adult action" not in nsfw_phase:
+    raise SystemExit("NSFW_INTERMEDIATE_ACTION_GUARD_MISSING")
+
+nsfw_ref = (ROOT / "tests/golden/nsfw-reference-isolation.expected.txt").read_text(encoding="utf-8")
+if "Do not import sexual actions" not in nsfw_ref:
+    raise SystemExit("NSFW_REFERENCE_ISOLATION_RULE_MISSING")
