@@ -1,0 +1,27 @@
+subject_definitions:
+Subject: the authorized subject.
+Object: the authorized object.
+
+summary:
+The subject performs the requested action through its complete physical sequence and reaches the requested final state.
+
+retention_analysis:
+Preserve the requested initial state.
+Preserve the requested trigger and physical action.
+Preserve the required intermediate state.
+Preserve the requested final state.
+Do not add unrelated actions between the required states.
+
+detailed_description:
+Initial state: the subject is in the user-specified initial state.
+Trigger: the user-specified trigger initiates the action.
+Physical action: the subject performs the requested action as one continuous physical sequence.
+Intermediate state: the subject reaches the specified intermediate state before continuing.
+Final state: the subject reaches the requested final state.
+The action must remain physically continuous; do not skip the prerequisite movement or introduce an unrelated action between dependent steps.
+
+overall_soundscape:
+Only sounds produced by the authorized action and environment.
+
+non_diegetic_music:
+N/A
