@@ -1,0 +1,24 @@
+subject_definitions:
+Picture 1: reference image for the identities and visual appearances of the male boss and female character.
+Male: the boss.
+Female: the woman.
+Environment: the boss's office, with the office desk as the interaction setting.
+
+summary:
+A male boss and a woman are having a conversation at the office desk in the boss's office.
+
+retention_analysis:
+Preserve the identities and visual appearances of the two characters from Picture 1.
+Preserve the male as the boss.
+Preserve the boss's office as the environment.
+Preserve the office desk as the interaction setting.
+Preserve the two-character conversation.
+
+detailed_description:
+The male boss and the woman are in the boss's office, having a conversation at the office desk. Maintain the identities and visual appearances established by Picture 1 throughout the shot. Keep the interaction focused on the requested conversation.
+
+overall_soundscape:
+The natural voices of the two characters during their conversation, with the sound consistent with the office environment.
+
+non_diegetic_music:
+N/A
