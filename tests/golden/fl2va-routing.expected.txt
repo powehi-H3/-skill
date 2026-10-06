@@ -1,0 +1,10 @@
+How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 2) aligns with the S.SS-second mark of the target video.
+
+integrated_multimodal_description:
+The video continuously develops from the supplied first-frame state toward the supplied last-frame state without an unrelated scene change.
+
+overall_soundscape:
+Only the authorized soundscape.
+
+non_diegetic_music:
+N/A
