@@ -1,0 +1,20 @@
+subject_definitions:
+Subject: the authorized subject.
+Visible text: the user-provided text that must appear on screen.
+
+summary:
+The subject performs the requested action while preserving the user-provided visible text exactly.
+
+retention_analysis:
+Preserve the visible text exactly as supplied.
+Preserve the requested subject, action, and setting.
+Do not translate, paraphrase, normalize, or replace the visible text.
+
+detailed_description:
+The user-provided visible text remains unchanged wherever it is required to appear on screen. The surrounding visual action follows only the authorized request.
+
+overall_soundscape:
+Only authorized sound.
+
+non_diegetic_music:
+N/A
