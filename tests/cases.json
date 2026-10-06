@@ -132,5 +132,25 @@
     "category": "reference",
     "goal": "transfer one explicit attribute without source contamination",
     "request": "Transfer only the explicitly requested attribute from Picture 2 to the subject defined by Picture 1."
+  },
+  {
+    "id": "action-continuity",
+    "category": "action",
+    "request": "保持动作完整连续：初始状态→触发→物理动作→中间状态→最终状态，不加入无关动作。"
+  },
+  {
+    "id": "time-budget",
+    "category": "temporal",
+    "request": "只安排用户要求的事件，不用额外剧情填充未指定时长。"
+  },
+  {
+    "id": "frame-endpoint",
+    "category": "keyframe",
+    "request": "首帧严格使用Picture 1，并连续发展到用户指定的最终状态。"
+  },
+  {
+    "id": "camera-grammar",
+    "category": "camera",
+    "request": "使用指定POV和机位，但除非明确要求，不增加推拉摇移跟拍或重新构图。"
   }
 ]
