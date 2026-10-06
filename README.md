@@ -75,3 +75,10 @@ The guiding rule is:
 > **Compile the user's intent faithfully first. Optimize execution only where it is authorized and useful.**
 
 Historical migration details are documented in `references/compiler/migration-map.md`.
+
+
+## NSFW core
+
+This successor is intentionally NSFW-focused. The NSFW layer is not a thin add-on: adult semantic preservation, action continuity, phase isolation, reference-role isolation, POV/camera separation, and migrated legacy production patterns are first-class compiler capabilities.
+
+Legacy prompt collections are audited and their reusable engineering patterns are migrated into `references/library/nsfw-pattern-library.md`; explicit historical prompt text is not treated as active Skill rules.
