@@ -1,0 +1,12 @@
+Phase A:
+Only Phase A actions and states.
+
+Transition:
+Phase A completes before the requested state transition.
+
+Phase B:
+Only Phase B actions and states.
+
+NSFW phase-isolation rule:
+Later adult actions must not leak into Phase A.
+No unrequested intermediate adult action may be inserted.
