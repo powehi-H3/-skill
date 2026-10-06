@@ -26,7 +26,9 @@ required_files = [
     "tests/golden/i2va.expected.txt",
     "tests/golden/attribute-transfer.expected.txt",
     "tests/golden/camera-only-repair.expected.txt",
-    "tests/golden/dialogue-audio-role.expected.txt",\n    "tests/golden/phase-isolation.expected.txt",\n    "tests/golden/pov-reference-role.expected.txt",
+    "tests/golden/dialogue-audio-role.expected.txt",
+    "tests/golden/phase-isolation.expected.txt",
+    "tests/golden/pov-reference-role.expected.txt",
 ]
 
 required_markers = [
