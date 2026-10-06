@@ -102,5 +102,30 @@
     "must_not_invent": [
       "unrelated scene change"
     ]
+  },
+  {
+    "id": "pov-reference-role",
+    "category": "reference",
+    "goal": "identity/environment/POV role isolation"
+  },
+  {
+    "id": "phase-isolation",
+    "category": "temporal",
+    "goal": "Phase A completion before Transition before Phase B"
+  },
+  {
+    "id": "dialogue-audio-role",
+    "category": "audio",
+    "goal": "exact dialogue plus timbre-only audio reference"
+  },
+  {
+    "id": "camera-only-repair",
+    "category": "repair",
+    "goal": "camera-only edit freezes unrelated semantics"
+  },
+  {
+    "id": "attribute-transfer",
+    "category": "reference",
+    "goal": "transfer one explicit attribute without source contamination"
   }
 ]
