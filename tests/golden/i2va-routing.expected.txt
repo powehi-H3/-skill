@@ -1,0 +1,10 @@
+For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.
+
+integrated_multimodal_description:
+Starting from the supplied first frame, the subject performs only the requested continuous action.
+
+overall_soundscape:
+Only the authorized soundscape.
+
+non_diegetic_music:
+N/A
