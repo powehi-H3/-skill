@@ -1,0 +1,8 @@
+NSFW semantic preservation:
+Preserve the adult semantic content explicitly supplied by the user.
+Do not replace, weaken, or reinterpret the requested adult action.
+Do not add any unrequested sexual action, participant, prop, position, emotion, or escalation.
+Compile the preserved semantics into the selected H3 mode.
+
+Semantic authority:
+USER > EXPLICIT REFERENCE ROLE > OFFICIAL H3 STRUCTURE > APPROVED SKILL RULE > APPROVED EXPERIENCE > MODEL INFERENCE.
