@@ -1,0 +1,14 @@
+name: H3 Offline Regression
+
+on:
+  push:
+    branches: ["main", "v1-foundation"]
+  pull_request:
+
+jobs:
+  structure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate Skill structure
+        run: python tests/validate_structure.py
