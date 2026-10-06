@@ -1,0 +1,20 @@
+subject_definitions:
+Male: the male subject.
+Female: the female subject.
+
+summary:
+The existing requested interaction is preserved while its wording is optimized for clarity and H3 execution.
+
+retention_analysis:
+Preserve all existing user-authorized subjects, setting, actions, dialogue, timing, camera, and sound.
+Improve wording, ordering, observability, or structural clarity only where necessary.
+Do not add new story facts, props, emotions, camera movements, or events.
+
+detailed_description:
+Recompile the existing authorized content into clearer H3-compatible wording without changing its semantic payload. No new event or visual detail is introduced merely because it is plausible.
+
+overall_soundscape:
+Preserve the existing authorized soundscape.
+
+non_diegetic_music:
+Preserve the existing music instruction.
