@@ -175,3 +175,15 @@ if "No unrequested intermediate adult action" not in nsfw_phase:
 nsfw_ref = (ROOT / "tests/golden/nsfw-reference-isolation.expected.txt").read_text(encoding="utf-8")
 if "Do not import sexual actions" not in nsfw_ref:
     raise SystemExit("NSFW_REFERENCE_ISOLATION_RULE_MISSING")
+
+nsfw_library = (ROOT / "references/library/nsfw-pattern-library.md").read_text(encoding="utf-8")
+for marker in [
+    "Adult action decomposition",
+    "POV and camera",
+    "Phase / sequence control",
+    "Reference roles",
+    "Prompt density",
+    "EXTRACT → PRESERVE → NORMALIZE → OPTIMIZE → RECOMPILE",
+]:
+    if marker not in nsfw_library:
+        raise SystemExit("NSFW_LIBRARY_MIGRATION_MARKER_MISSING")
