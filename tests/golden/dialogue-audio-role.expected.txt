@@ -1,0 +1,22 @@
+subject_definitions:
+S1: the first authorized speaker.
+S2: the second authorized speaker.
+Audio 1: reference for voice timbre and delivery only.
+
+summary:
+The two speakers perform the user-provided dialogue in the requested interaction.
+
+retention_analysis:
+Preserve the dialogue exactly as supplied by the user.
+Preserve S1 and S2 speaker identity.
+Use Audio 1 only for voice timbre and delivery.
+Do not copy dialogue or semantic content from Audio 1.
+
+detailed_description:
+S1 delivers the user-provided dialogue assigned to S1. S2 delivers the user-provided dialogue assigned to S2. The spoken content remains unchanged.
+
+overall_soundscape:
+Natural environmental sound only; spoken dialogue is carried by the specified speakers.
+
+non_diegetic_music:
+N/A
