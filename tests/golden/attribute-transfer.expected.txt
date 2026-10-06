@@ -1,0 +1,21 @@
+subject_definitions:
+Picture 1: reference image for the person's identity and appearance.
+Picture 2: reference image for the requested transferred attribute.
+Subject: the target person.
+
+summary:
+The target person keeps the identity and appearance from Picture 1 while receiving only the user-authorized attribute from Picture 2.
+
+retention_analysis:
+Preserve identity and appearance from Picture 1.
+Transfer only the explicitly requested attribute from Picture 2.
+Do not import other attributes, environment, pose, props, lighting, or style from Picture 2.
+
+detailed_description:
+Maintain the target person's identity and appearance from Picture 1. Apply only the explicitly requested attribute transferred from Picture 2.
+
+overall_soundscape:
+Only authorized environmental sound.
+
+non_diegetic_music:
+N/A
