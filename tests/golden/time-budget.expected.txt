@@ -1,0 +1,21 @@
+subject_definitions:
+Subject: the authorized subject.
+
+summary:
+The video contains only the user-requested events within the available duration.
+
+retention_analysis:
+Prioritize mandatory dialogue and performance.
+Preserve mandatory transitions and state changes.
+Preserve required actions and final state.
+Do not invent additional events to fill unused duration.
+Do not invent a duration when the user did not specify one.
+
+detailed_description:
+Allocate the available duration to the required dialogue, actions, transitions, and state changes. Keep each event only as long as needed to remain observable and continuous. Any remaining descriptive capacity must not be filled with new story events.
+
+overall_soundscape:
+Only authorized environmental and interaction sounds.
+
+non_diegetic_music:
+N/A
