@@ -1,0 +1,10 @@
+For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.
+
+integrated_multimodal_description:
+The target video begins in the exact state established by Picture 1 and continuously develops toward the requested final state. Preserve the supplied opening state without introducing an unrelated opening action.
+
+overall_soundscape:
+Only the authorized soundscape associated with the continuous transition.
+
+non_diegetic_music:
+N/A
