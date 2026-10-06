@@ -172,5 +172,30 @@
     "id": "visible-text-preservation",
     "category": "text",
     "request": "画面中的指定文字保持原文，不翻译、不改写。"
+  },
+  {
+    "id": "mode-route-t2va",
+    "category": "routing",
+    "request": "只有文字描述，没有参考图，应该使用T2VA三字段Schema，不使用Ref2VA字段。"
+  },
+  {
+    "id": "mode-route-i2va",
+    "category": "routing",
+    "request": "提供首帧图片，从首帧开始发展，使用I2VA首帧对齐格式。"
+  },
+  {
+    "id": "mode-route-fl2va",
+    "category": "routing",
+    "request": "提供首帧和尾帧参考，使用FL2VA首尾帧连续路径格式。"
+  },
+  {
+    "id": "mode-route-l2va",
+    "category": "routing",
+    "request": "提供尾帧参考，向尾帧发展，使用L2VA尾帧对齐格式。"
+  },
+  {
+    "id": "mode-route-ref2va",
+    "category": "routing",
+    "request": "多张参考图分别承担人物和环境职责，使用Ref2VA六段Schema。"
   }
 ]
