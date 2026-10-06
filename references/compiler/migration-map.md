@@ -35,3 +35,25 @@ Those may remain historical material in the old repository. They are not silentl
 ## Design principle
 
 The new Skill keeps the old project's strongest ideas while removing the mechanisms that caused rule competition and prompt over-expansion.
+
+
+## NSFW prompt-library migration
+
+The legacy NSFW prompt collections were audited and their reusable engineering patterns were migrated into `references/library/nsfw-pattern-library.md`.
+
+Migrated:
+- adult action/state decomposition;
+- body-state and spatial-relation representation;
+- NSFW POV/camera separation;
+- multi-phase state locking;
+- reference-role isolation;
+- dialogue/audio separation;
+- prompt-density discipline;
+- Extract → Preserve → Normalize → Optimize → Recompile;
+- evidence/validation status separation.
+
+Not copied as active Skill rules:
+- literal explicit sexual prompt text;
+- unverified explicit samples;
+- automatic promotion of historical prompts;
+- blanket cinematic defaults.
