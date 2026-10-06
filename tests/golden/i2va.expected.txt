@@ -1,0 +1,7 @@
+For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.
+
+integrated_multimodal_description: [Shot 1] Live-action, the scene begins from <Picture 1> and the authorized action develops forward.
+
+overall_soundscape: Natural environmental sound.
+
+non_diegetic_music: N/A
