@@ -29,6 +29,10 @@ required_files = [
     "tests/golden/dialogue-audio-role.expected.txt",
     "tests/golden/phase-isolation.expected.txt",
     "tests/golden/pov-reference-role.expected.txt",
+    "tests/golden/camera-grammar.expected.txt",
+    "tests/golden/frame-endpoint.expected.txt",
+    "tests/golden/time-budget.expected.txt",
+    "tests/golden/action-continuity.expected.txt",
 ]
 
 required_markers = [
