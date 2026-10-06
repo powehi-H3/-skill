@@ -12,3 +12,5 @@ jobs:
       - uses: actions/checkout@v4
       - name: Validate Skill structure
         run: python tests/validate_structure.py
+      - name: Validate golden prompt
+        run: python tests/validate_golden.py
