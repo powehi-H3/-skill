@@ -38,6 +38,11 @@ required_files = [
     "tests/golden/diagnose-no-rewrite.expected.txt",
     "tests/golden/optimize-no-semantic-addition.expected.txt",
     "tests/golden/multi-subject-role.expected.txt",
+    "tests/golden/ref2va-routing.expected.txt",
+    "tests/golden/l2va-routing.expected.txt",
+    "tests/golden/fl2va-routing.expected.txt",
+    "tests/golden/i2va-routing.expected.txt",
+    "tests/golden/t2va-routing.expected.txt",
 ]
 
 required_markers = [
