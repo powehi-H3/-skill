@@ -39,3 +39,29 @@ references/
   library/
 tests/
 ```
+
+
+## Product philosophy
+
+This project is the cleaned successor to an earlier H3 Skill implementation.
+
+It deliberately keeps the earlier project's strongest production mechanisms:
+
+- semantic addition gating;
+- strict edit scope and preservation;
+- state/transition isolation;
+- reference-role locking;
+- production reasoning and continuity geometry;
+- smallest-responsible-layer repair;
+- payload purity;
+- Prompt Library / Experience Library separation;
+- user-approved experience governance;
+- static and golden regression.
+
+It deliberately does **not** copy the previous project's large historical architecture, duplicated rule layers, or unvalidated sample catalogues into the runtime compiler.
+
+The guiding rule is:
+
+> **Compile the user's intent faithfully first. Optimize execution only where it is authorized and useful.**
+
+Historical migration details are documented in `references/compiler/migration-map.md`.
