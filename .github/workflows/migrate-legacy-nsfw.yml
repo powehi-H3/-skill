@@ -46,6 +46,10 @@ jobs:
               *"/GROK/"*)
                 dst="references/library/legacy-nsfw-prompts/grok/$(basename "$src")"
                 ;;
+              *"baseline/H3NSFW提示词技能skill第三版-V1-5-patch-optimize/"*)
+                rel="${src#baseline/H3NSFW提示词技能skill第三版-V1-5-patch-optimize/references/poses/}"
+                dst="references/library/legacy-nsfw-prompts/baseline/$rel"
+                ;;
               *)
                 dst="references/library/legacy-nsfw-prompts/pw-0001/$(basename "$src")"
                 ;;
