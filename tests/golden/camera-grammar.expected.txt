@@ -1,0 +1,20 @@
+subject_definitions:
+Subject: the authorized subject.
+
+summary:
+The requested subject action is presented from the specified camera placement and POV without adding unrequested camera movement.
+
+retention_analysis:
+Preserve the requested subject action.
+Preserve the requested POV and camera placement.
+Do not treat POV identity as permission to add camera movement.
+Do not add push-in, pan, tilt, tracking, zoom, or reframing unless requested or necessary for the specified camera behavior.
+
+detailed_description:
+The camera remains at the requested placement and POV while the subject performs the authorized action. Camera movement is limited to the movement explicitly requested by the user.
+
+overall_soundscape:
+Only authorized sound.
+
+non_diegetic_music:
+N/A
