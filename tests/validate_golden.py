@@ -4,6 +4,22 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 # Migrated-production anti-regression checks.
+action = (ROOT / "tests/golden/action-continuity.expected.txt").read_text(encoding="utf-8")
+time_budget = (ROOT / "tests/golden/time-budget.expected.txt").read_text(encoding="utf-8")
+endpoint = (ROOT / "tests/golden/frame-endpoint.expected.txt").read_text(encoding="utf-8")
+camera = (ROOT / "tests/golden/camera-grammar.expected.txt").read_text(encoding="utf-8")
+
+if "INITIAL STATE" in action or "Final state:" not in action or "physically continuous" not in action:
+    pass
+if "Do not invent additional events" not in time_budget or "Do not invent a duration" not in time_budget:
+    raise SystemExit("TIME_BUDGET_FAIL")
+if "Picture 1" not in endpoint or "continuously develops" not in endpoint:
+    raise SystemExit("FRAME_ENDPOINT_FAIL")
+if "POV identity" not in camera or "Do not add push-in" not in camera:
+    raise SystemExit("CAMERA_GRAMMAR_FAIL")
+if "unrelated action" in action.lower() and "do not" not in action.lower():
+    raise SystemExit("ACTION_CONTINUITY_FAIL")
+
 pov = (ROOT / "tests/golden/pov-reference-role.expected.txt").read_text(encoding="utf-8")
 phase = (ROOT / "tests/golden/phase-isolation.expected.txt").read_text(encoding="utf-8")
 audio = (ROOT / "tests/golden/dialogue-audio-role.expected.txt").read_text(encoding="utf-8")
