@@ -34,6 +34,10 @@ required_files = [
     "tests/golden/frame-endpoint.expected.txt",
     "tests/golden/time-budget.expected.txt",
     "tests/golden/action-continuity.expected.txt",
+    "tests/golden/visible-text-preservation.expected.txt",
+    "tests/golden/diagnose-no-rewrite.expected.txt",
+    "tests/golden/optimize-no-semantic-addition.expected.txt",
+    "tests/golden/multi-subject-role.expected.txt",
 ]
 
 required_markers = [
