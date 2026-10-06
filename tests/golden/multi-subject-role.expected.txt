@@ -1,0 +1,26 @@
+subject_definitions:
+Picture 1: reference image for Subject A identity and appearance.
+Picture 2: reference image for Subject B identity and appearance.
+Picture 3: reference image for the environment.
+Subject A: the first subject.
+Subject B: the second subject.
+Environment: the environment established by Picture 3.
+
+summary:
+Subject A and Subject B perform the user-authorized interaction in the environment established by Picture 3.
+
+retention_analysis:
+Preserve Subject A identity and appearance from Picture 1.
+Preserve Subject B identity and appearance from Picture 2.
+Preserve the environment from Picture 3.
+Keep the subjects semantically distinct.
+Do not transfer attributes between the subjects unless explicitly requested.
+
+detailed_description:
+Subject A and Subject B remain distinct subjects throughout the interaction. Their identities and appearances remain tied to their assigned references, while the environment remains tied to Picture 3. Only the requested interaction is performed.
+
+overall_soundscape:
+Only authorized environmental and interaction sounds.
+
+non_diegetic_music:
+N/A
