@@ -1,0 +1,10 @@
+How the reference pictures align with the target video — <Picture 1> (from [Shot 2]) aligns with the S.SS-second mark of the target video.
+
+integrated_multimodal_description:
+The video develops toward the supplied last-frame state while maintaining a plausible continuous path.
+
+overall_soundscape:
+Only the authorized soundscape.
+
+non_diegetic_music:
+N/A
