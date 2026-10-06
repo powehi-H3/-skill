@@ -1,0 +1,22 @@
+subject_definitions:
+Picture 1: reference image for the subject identity and appearance.
+Picture 2: reference image for the environment.
+Subject: the authorized subject.
+Environment: the environment established by Picture 2.
+
+summary:
+The subject performs the requested interaction in the environment established by the assigned references.
+
+retention_analysis:
+Preserve the subject identity and appearance from Picture 1.
+Preserve the environment from Picture 2.
+Preserve only the explicitly requested interaction.
+
+detailed_description:
+The subject and environment remain consistent with their assigned references while the requested interaction occurs.
+
+overall_soundscape:
+Only authorized sound.
+
+non_diegetic_music:
+N/A
