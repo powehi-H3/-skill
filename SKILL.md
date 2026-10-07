@@ -343,7 +343,77 @@ If an Experience Library is present, use `references/library/experience-retrieva
 
 Prompt Library artifacts are examples of validated outputs; Experience Library records the conditions and lessons behind them. Do not automatically promote either into Skill rules.
 
-## 19. Final output
+
+## 19. User-directed visual learning
+
+When learning from user-supplied images, videos, or multimodal evidence, require an explicit **Learning Scope** before extracting reusable Experience.
+
+Learning Scope must identify, as applicable:
+
+- TARGET — the exact element(s) to learn.
+- SOURCE — which asset(s) provide the evidence.
+- RANGE — whole asset, phase, subject, body region, image region, shot, or time interval.
+- EXCLUDE — elements that must not be learned or imported.
+- PURPOSE — observation, comparison, pattern extraction, H3 hypothesis, or validation support.
+
+**User-selected learning scope outranks autonomous visual interpretation.**
+
+Do not turn unspecified or excluded visual elements into Experience candidates.
+
+### Image / video distinction
+
+- Images primarily provide **state evidence**.
+- Videos primarily provide **transition and temporal evidence**.
+- Multiple images can provide state-change evidence.
+- Image + video combinations must keep each asset's reference role explicit.
+
+For action/sequence learning, prefer:
+INITIAL STATE → TRIGGER → ACTION → INTERMEDIATE STATE → FINAL STATE.
+
+For camera learning, separately extract POV, camera position, framing, camera movement, and shot/transition behavior.
+
+Do not merge camera experience with action experience unless both are inside the Learning Scope.
+
+### Observation levels
+
+Keep these levels separate:
+
+- O1 — direct observation.
+- O2 — reliable structural inference.
+- H1 — H3 engineering hypothesis.
+- V1 — H3 experiment validated.
+- A1 — user-approved active Experience.
+
+Observation is not causality. A visual pattern is not automatically an H3 rule.
+
+### Exclusion lock
+
+Example:
+
+TARGET = camera movement
+EXCLUDE = action, appearance, environment, dialogue
+
+The excluded elements may be visible in the evidence, but they must not be promoted into the learned Experience.
+
+### Localized learning
+
+The user may constrain learning to a subject, body region, image region, video phase, time interval, shot, or camera behavior. The restriction is binding.
+
+### Negative evidence
+
+Record meaningful observed non-events when supported by the evidence, but do not turn a single absence into a universal prohibition.
+
+### Promotion gate
+
+Visual evidence follows:
+
+CANDIDATE → VALIDATED → APPROVED
+
+Only APPROVED Experience with explicit user approval may influence future generation.
+
+Use references/visual-learning/user-directed-visual-learning.md and references/visual-learning/visual-evidence-schema.md for visual-learning tasks.
+
+## 20. Final output
 
 For a prompt-writing task, output the applicable H3 payload directly.
 
