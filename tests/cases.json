@@ -212,5 +212,17 @@
     "id": "nsfw-reference-isolation",
     "category": "adult",
     "request": "人物、环境、声音分别由不同参考指定；不得从未授权的参考中导入成人动作、姿势、道具、台词或升级内容。"
+  },
+  {
+    "id": "user-directed-visual-learning",
+    "category": "visual-learning",
+    "request": "User specifies learning only action order from a video, excluding camera, appearance, environment, and sound.",
+    "must_preserve": ["learning target", "exclusions", "observation vs inference", "candidate before approval"]
+  },
+  {
+    "id": "visual-learning-exclusion",
+    "category": "visual-learning",
+    "request": "User specifies learning only camera movement, excluding action, appearance, environment, and dialogue.",
+    "must_preserve": ["TARGET", "EXCLUDE", "scope lock"]
   }
 ]
