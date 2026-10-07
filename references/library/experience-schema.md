@@ -75,3 +75,19 @@ Historical prompts are evidence, not text snippets to copy. Extract the reusable
 Scope is binding. A camera lesson cannot silently modify character identity or dialogue.
 
 STALE, SUPERSEDED, and REVOKED records remain historical records but are not current defaults.
+
+
+## Visual evidence provenance
+
+Experience derived from images or videos should preserve:
+
+- learning target;
+- source asset(s);
+- source time/frame/region when relevant;
+- explicit exclusions;
+- observation vs inference vs hypothesis;
+- validation experiment;
+- observer model and H3 model context.
+
+A visual observation without validation is not an active Experience.
+
