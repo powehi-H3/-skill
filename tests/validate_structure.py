@@ -23,6 +23,10 @@ required_files = [
     "references/library/README.md",
     "references/library/approved-experience-examples.md",
     "references/library/nsfw-pattern-library.md",
+    "references/visual-learning/user-directed-visual-learning.md",
+    "references/visual-learning/visual-evidence-schema.md",
+    "tests/golden/user-directed-visual-learning.expected.txt",
+    "tests/golden/visual-learning-exclusion.expected.txt",
     "tests/cases.json",
     "tests/golden/base-t2va.expected.txt",
     "tests/golden/i2va.expected.txt",
@@ -74,6 +78,12 @@ required_markers = [
     "Added",
     "Altered",
     "Contradicted",
+    "Learning Scope",
+    "TARGET",
+    "EXCLUDE",
+    "CANDIDATE",
+    "VALIDATED",
+    "APPROVED",
 ]
 
 missing_files = [p for p in required_files if not (ROOT / p).is_file()]
