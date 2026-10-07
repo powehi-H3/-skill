@@ -187,3 +187,15 @@ for marker in [
 ]:
     if marker not in nsfw_library:
         raise SystemExit("NSFW_LIBRARY_MIGRATION_MARKER_MISSING")
+
+
+visual = (ROOT / "tests/golden/user-directed-visual-learning.expected.txt").read_text(encoding="utf-8")
+visual_ex = (ROOT / "tests/golden/visual-learning-exclusion.expected.txt").read_text(encoding="utf-8")
+for marker in ["Learning Scope", "user-selected target", "observation separated from inference", "CANDIDATE → VALIDATED → APPROVED"]:
+    if marker not in visual:
+        raise SystemExit("VISUAL_LEARNING_MARKER_FAIL: " + marker)
+if "Do not autonomously learn unspecified elements." not in visual:
+    raise SystemExit("VISUAL_LEARNING_AUTONOMY_FAIL")
+for marker in ["TARGET = camera movement", "EXCLUDE = action, appearance, environment, dialogue", "Learning scope is binding."]:
+    if marker not in visual_ex:
+        raise SystemExit("VISUAL_LEARNING_EXCLUSION_FAIL: " + marker)
