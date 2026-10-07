@@ -1,0 +1,9 @@
+# Visual Learning Exclusion Lock
+
+Example:
+TARGET = camera movement
+EXCLUDE = action, appearance, environment, dialogue
+
+The system may observe excluded content for safety/interpretation, but must not promote excluded content into the learned H3 experience.
+
+Learning scope is binding.
