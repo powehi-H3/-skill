@@ -1,0 +1,27 @@
+# User-Directed Visual Learning
+
+Required:
+- explicit Learning Scope
+- user-selected target
+- source asset assignment
+- exclusion lock
+- observation separated from inference
+- candidate experience separated from approved experience
+
+Image:
+- image is state evidence
+- do not infer motion as fact from one frame
+
+Video:
+- action learning may represent INITIAL STATE → ACTION → INTERMEDIATE STATE → FINAL STATE
+- camera learning remains separate from action learning
+
+Multimodal:
+- each asset has an explicit role
+- no unrelated cross-reference contamination
+
+Promotion:
+- CANDIDATE → VALIDATED → APPROVED
+- only APPROVED + user approval may affect future generation
+
+Do not autonomously learn unspecified elements.
